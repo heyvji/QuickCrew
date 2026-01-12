@@ -62,7 +62,7 @@ const Footer = () => {
                             textDecoration: 'none',
                             color: 'white'
                         }}>
-                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src="./src/images/app-store-logo.png" width="30px" height="30px" /></span>
+                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src="./src/assets/images/app-store-logo.png" width="30px" height="30px" /></span>
                             <div>
                                 <div style={{ fontSize: '0.7rem', color: '#aaa' }}>Download on the</div>
                                 <div style={{ fontSize: '1rem', fontWeight: 'bold' }}>App Store</div>
@@ -78,7 +78,7 @@ const Footer = () => {
                             textDecoration: 'none',
                             color: 'white'
                         }}>
-                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src="./src/images/play-store-logo.png" width="30px" height="30px" /></span>
+                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src="./src/assets/images/play-store-logo.png" width="30px" height="30px" /></span>
                             <div>
                                 <div style={{ fontSize: '0.7rem', color: '#aaa' }}>GET IT ON</div>
                                 <div style={{ fontSize: '1rem', fontWeight: 'bold' }}>Google Play</div>

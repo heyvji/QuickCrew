@@ -39,7 +39,7 @@ const WhyWorkers = () => {
                         justifyContent: 'center',
                         boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
                     }}>
-                        <span style={{ color: '#aaa' }}><img src="./src/images/worker-app-logo.png" alt="Worker App" width="350" height="350" /></span>
+                        <span style={{ color: '#aaa' }}><img src="./src/assets/images/worker-app-logo.png" alt="Worker App" width="350" height="350" /></span>
                     </div>
                 </div>
             </div>

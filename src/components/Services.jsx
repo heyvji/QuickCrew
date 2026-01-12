@@ -1,6 +1,6 @@
-import stallHandlingImg from '../images/stall handling.png';
-import eventVolunteeringImg from '../images/event-volunteering.png';
-import clientAssistantImg from '../images/client-assistent.png';
+import stallHandlingImg from '../assets/images/stall handling.png';
+import eventVolunteeringImg from '../assets/images/event-volunteering.png';
+import clientAssistantImg from '../assets/images/client-assistent.png';
 
 const Services = () => {
     const services = [

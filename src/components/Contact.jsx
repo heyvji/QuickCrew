@@ -1,6 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+    });
+
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm((prevForm) => ({
+            ...prevForm,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form)
+            });
+            const data = await response.json();
+            console.log(data);
+            if (response.ok) {
+                setForm({
+                    name: "",
+                    email: "",
+                    subject: "",
+                    message: ""
+                });
+                setIsSubmitted(true);
+            } else {
+                alert("Failed to send message: " + (data.error || "Unknown error"));
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
     return (
         <section id="contact" className="section-padding" style={{ backgroundColor: '#001233', color: 'white' }}>
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
@@ -17,15 +59,56 @@ const Contact = () => {
                 backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(255,255,255,0.1)'
             }}>
-                <form style={{ display: 'grid', gap: '1.5rem' }}>
-                    <div className="contact-grid">
-                        <input type="text" placeholder="Name" style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }} />
-                        <input type="email" placeholder="Email" style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }} />
+                {isSubmitted ? (
+                    <div style={{ textAlign: 'center', padding: '2rem' }}>
+                        <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'white' }}>We will get back to you soon!</h3>
+                        <button
+                            className="btn-primary"
+                            onClick={() => setIsSubmitted(false)}
+                            style={{ minWidth: '200px' }}
+                        >
+                            Send another message
+                        </button>
                     </div>
-                    <input type="text" placeholder="Subject" style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }} />
-                    <textarea rows="5" placeholder="Message" style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}></textarea>
-                    <button type="submit" className="btn-primary" style={{ justifySelf: 'start', minWidth: '200px' }}>Send Message</button>
-                </form>
+                ) : (
+                    <form style={{ display: 'grid', gap: '1.5rem' }} onSubmit={handleSubmit}>
+                        <div className="contact-grid">
+                            <input
+                                type="text"
+                                name="name"
+                                value={form.name}
+                                onChange={handleChange}
+                                placeholder="Name"
+                                style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                value={form.email}
+                                onChange={handleChange}
+                                placeholder="Email"
+                                style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                            />
+                        </div>
+                        <input
+                            type="text"
+                            name="subject"
+                            value={form.subject}
+                            onChange={handleChange}
+                            placeholder="Subject"
+                            style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                        />
+                        <textarea
+                            rows="5"
+                            name="message"
+                            value={form.message}
+                            onChange={handleChange}
+                            placeholder="Message"
+                            style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                        ></textarea>
+                        <button type="submit" className="btn-primary" style={{ justifySelf: 'start', minWidth: '200px' }}>Send Message</button>
+                    </form>
+                )}
             </div>
         </section>
     );

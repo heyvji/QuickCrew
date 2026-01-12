@@ -36,7 +36,7 @@ const About = () => {
                     boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
                 }}>
                     <div style={{ textAlign: 'center', fontSize: '1.2rem', letterSpacing: '1.2px' }}>
-                        <span style={{ fontSize: '0.1rem', display: 'block', color: 'var(--color-secondary)' }}><img src="./src/images/company-logo.png" alt="Company Logo" width="250" height="250" /></span>
+                        <span style={{ fontSize: '0.1rem', display: 'block', color: 'var(--color-secondary)' }}><img src="./src/assets/images/company-logo.png" alt="Company Logo" width="250" height="250" /></span>
                         <span style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '1.2rem' }}>Since 2026</span>
                     </div>
                     {/* Decorative border */}

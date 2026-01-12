@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className="nav-logo">
-                <div><img src="./src/images/company-logo.png" alt="Company Logo" width="100" height="100" border="2px solid gold"/></div>
+                <div><img src="./src/assets/images/company-logo.png" alt="Company Logo" width="100" height="100" border="2px solid gold"/></div>
                 <div style={{ fontSize: '1.2rem', fontFamily: 'var(--font-heading)', letterSpacing: '1.2px', color: 'white', fontWeight: 'bold', marginTop: '5px'}}>
                     QuickCrew
                 </div>
