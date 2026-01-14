@@ -46,3 +46,23 @@ To get started with the project locally, follow these steps:
 ## License
 
 This project is licensed under the MIT License.
+
+### version 1.00.00 summary
+
+- Initial release with basic features.
+
+### version 1.01.00 summary
+
+- Added Contact Us page.
+- Bulit backend with MySQL database.
+
+### version 1.01.01 summary
+
+- cleared performance issues.
+
+### version 1.02.00 summary
+
+-- New features added ~
+   - social links layout
+   - Modified contact us page with MongoDB database.
+   - improved performance.

@@ -44,24 +44,16 @@ const Contact = () => {
         }
     };
     return (
-        <section id="contact" className="section-padding" style={{ backgroundColor: '#001233', color: 'white' }}>
-            <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'white' }}>Contact Us</h2>
-                <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-secondary)', margin: '0 auto' }}></div>
+        <section id="contact" className="section-padding bg-dark-blue text-white">
+            <div className="text-center mb-5">
+                <h2 className="Section_title mb-4 text-white">Contact Us</h2>
+                <div className="separator-gold"></div>
             </div>
 
-            <div style={{
-                maxWidth: '800px',
-                margin: '0 auto',
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                padding: '3rem',
-                borderRadius: '8px',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255,255,255,0.1)'
-            }}>
+            <div className="glass-card">
                 {isSubmitted ? (
-                    <div style={{ textAlign: 'center', padding: '2rem' }}>
-                        <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'white' }}>We will get back to you soon!</h3>
+                    <div className="text-center p-4">
+                        <h3 className="text-2xl mb-6 text-white">We will get back to you soon!</h3>
                         <button
                             className="btn-primary"
                             onClick={() => setIsSubmitted(false)}
@@ -71,7 +63,7 @@ const Contact = () => {
                         </button>
                     </div>
                 ) : (
-                    <form style={{ display: 'grid', gap: '1.5rem' }} onSubmit={handleSubmit}>
+                    <form className="grid gap-6" onSubmit={handleSubmit}>
                         <div className="contact-grid">
                             <input
                                 type="text"
@@ -79,7 +71,7 @@ const Contact = () => {
                                 value={form.name}
                                 onChange={handleChange}
                                 placeholder="Name"
-                                style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                                className="form-input"
                             />
                             <input
                                 type="email"
@@ -87,7 +79,7 @@ const Contact = () => {
                                 value={form.email}
                                 onChange={handleChange}
                                 placeholder="Email"
-                                style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                                className="form-input"
                             />
                         </div>
                         <input
@@ -96,7 +88,7 @@ const Contact = () => {
                             value={form.subject}
                             onChange={handleChange}
                             placeholder="Subject"
-                            style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                            className="form-input"
                         />
                         <textarea
                             rows="5"
@@ -104,7 +96,7 @@ const Contact = () => {
                             value={form.message}
                             onChange={handleChange}
                             placeholder="Message"
-                            style={{ padding: '1rem', borderRadius: '4px', border: 'none', backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', width: '100%' }}
+                            className="form-input"
                         ></textarea>
                         <button type="submit" className="btn-primary" style={{ justifySelf: 'start', minWidth: '200px' }}>Send Message</button>
                     </form>
