@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import companyLogo from '../assets/images/company-logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className="nav-logo">
-                <div><img src="./src/assets/images/company-logo.png" alt="Company Logo" width="80" height="80" /></div>
+                <div><img src={companyLogo} alt="Company Logo" width="80" height="80" /></div>
                 <div className="navbar-logo-text">
                     QuickCrew
                 </div>

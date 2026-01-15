@@ -1,4 +1,5 @@
 import React from 'react';
+import clientAppLogo from '../assets/images/client-app-logo.png';
 
 const WhyClients = () => {
     return (
@@ -54,7 +55,7 @@ const WhyClients = () => {
                         justifyContent: 'center',
                         boxShadow: '0 20px 40px rgba(0,0,0,0.3)'
                     }}>
-                        <span style={{ color: 'rgba(255,255,255,0.5)' }}><img src="./src/assets/images/client-app-logo.png" alt="Client App" width="350" height="350" /></span>
+                        <span style={{ color: 'rgba(255,255,255,0.5)' }}><img src={clientAppLogo} alt="Client App" width="350" height="350" /></span>
                     </div>
                 </div>
             </div>

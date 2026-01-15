@@ -71,6 +71,7 @@ This project is licensed under the MIT License.
 - Modified URI for API calls, to connect with backend server after deployment.
 - fixed minor issues.
 
-### version 1.02.04 summary
+### version 1.02.04, 1.02.05 summary
 
 - Fixed Mobile view issues.
+- Fixed logo display after deployment.

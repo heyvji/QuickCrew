@@ -1,4 +1,7 @@
 import React from 'react';
+import companyLogo from '../assets/images/company-logo.png';
+import appStoreLogo from '../assets/images/app-store-logo.png';
+import playStoreLogo from '../assets/images/play-store-logo.png';
 
 const Footer = () => {
     return (
@@ -8,7 +11,7 @@ const Footer = () => {
                 {/* Brand Column */}
                 <div style={{ gridColumn: '1 / -1' }}>
                     <div className="flex items-center">
-                        <span style={{ fontSize: '1rem', fontWeight: 'bold', padding: '5px 15px', marginRight: '10px' }}><img src="./src/assets/images/company-logo.png" alt="Company Logo" width="80" height="80" /></span>
+                        <span style={{ fontSize: '1rem', fontWeight: 'bold', padding: '5px 15px', marginRight: '10px' }}><img src={companyLogo} alt="Company Logo" width="80" height="80" /></span>
                         <span className="font-heading text-lg">QuickCrew</span>
                     </div>
                 </div>
@@ -65,14 +68,14 @@ const Footer = () => {
                     <h3 className="text-lg font-bold mb-4 text-white">Get the App</h3>
                     <div className="flex flex-col gap-2">
                         <a href="https://apps.apple.com/in/app/quickcrew/id6445201916" className="store-badge" target="_blank" rel="noopener noreferrer">
-                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src="./src/assets/images/app-store-logo.png" width="30px" height="30px" /></span>
+                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src={appStoreLogo} width="30px" height="30px" /></span>
                             <div>
                                 <div style={{ fontSize: '0.7rem', color: '#aaa' }}>Download on the</div>
                                 <div style={{ fontSize: '1rem', fontWeight: 'bold' }}>App Store</div>
                             </div>
                         </a>
                         <a href="https://play.google.com/store/apps/details?id=com.quickcrew" className="store-badge" target="_blank" rel="noopener noreferrer">
-                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src="./src/assets/images/play-store-logo.png" width="30px" height="30px" /></span>
+                            <span style={{ fontSize: '1.5rem', marginRight: '10px' }}><img src={playStoreLogo} width="30px" height="30px" /></span>
                             <div>
                                 <div style={{ fontSize: '0.7rem', color: '#aaa' }}>GET IT ON</div>
                                 <div style={{ fontSize: '1rem', fontWeight: 'bold' }}>Google Play</div>
