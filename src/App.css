@@ -247,6 +247,11 @@ nav {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
 }
 
 .nav-logo {
@@ -268,6 +273,33 @@ nav {
     display: flex;
     gap: 2rem;
     font-size: 1rem;
+}
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: var(--color-secondary);
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
 }
 
 .hamburger {

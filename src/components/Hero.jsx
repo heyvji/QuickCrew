@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
     const clients = [
-        { id: 1, name: 'Google', logo: '🌐' },
-        { id: 2, name: 'Microsoft', logo: '💻' },
-        { id: 3, name: 'Amazon', logo: '📦' },
-        { id: 4, name: 'Tesla', logo: '🚗' },
-        { id: 5, name: 'Netflix', logo: '🎬' }
+        { id: 1, name: 'Hilton', logo: 'H' },
+        { id: 2, name: 'Marriott', logo: 'M' },
+        { id: 3, name: 'W', logo: 'W' },
+        { id: 4, name: 'Four Seasons', logo: 'FS' },
+        { id: 5, name: 'Hyatt', logo: 'H' }
     ];
 
     const [currentClient, setCurrentClient] = useState(0);
@@ -38,14 +38,14 @@ const Hero = () => {
 
                 {/* Right Side: Major Clients */}
                 <div>
-                    <h3 className="mb-4" style={{ color: 'var(--color-secondary)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Trusted by Industry Leaders</h3>
+                    <h3 className="mb-4" style={{ color: 'var(--color-secondary)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: 'bold' }}>Trusted by Industry Leaders</h3>
                     <div style={{
                         position: 'relative',
-                        height: '180px',
+                        height: '280px',
                         backgroundColor: 'rgba(255, 255, 255, 0.05)',
                         backdropFilter: 'blur(10px)',
-                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                        borderRadius: '20px',
+                        border: '2px solid rgba(255, 255, 255, 0.1)',
+                        borderRadius: '40px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -61,6 +61,7 @@ const Hero = () => {
                         }}>
                             <div style={{
                                 fontSize: '2rem',
+                                // fontStyle: 'Poppins',
                                 marginBottom: '10px',
                                 color: 'rgba(255,255,255,0.8)'
                             }}>

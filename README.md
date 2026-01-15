@@ -71,7 +71,9 @@ This project is licensed under the MIT License.
 - Modified URI for API calls, to connect with backend server after deployment.
 - fixed minor issues.
 
-### version 1.02.04, 1.02.05 summary
+### version 1.02.04, 1.02.05, 1.02.06 summary
 
 - Fixed Mobile view issues.
 - Fixed logo display after deployment.
+- added effects to navigation bar links when mouse hovers over them.
+- Navbar hides when scrolling down and shows when scrolling up.
