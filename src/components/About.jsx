@@ -7,8 +7,8 @@ const About = () => {
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>About Us</h2>
                 <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-secondary)', margin: '0 auto' }}></div>
             </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ flex: '1 1 500px', maxWidth: '600px' }}>
+            <div className="flex-responsive">
+                <div className="flex-item-text">
                     <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'var(--color-primary)' }}>
                         Building <span className="text-gold">Trust</span> Through Service
                     </h3>
@@ -21,9 +21,7 @@ const About = () => {
                 </div>
 
                 {/* Placeholder for an image or visual element */}
-                <div style={{
-                    flex: '1 1 400px',
-                    maxWidth: '500px',
+                <div className="flex-item-image" style={{
                     height: '350px',
                     backgroundColor: '#001f3f', // Navy placeholder
                     background: 'linear-gradient(45deg, #001f3f, #003366)',

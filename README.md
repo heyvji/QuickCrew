@@ -66,3 +66,11 @@ This project is licensed under the MIT License.
    - social links layout
    - Modified contact us page with MongoDB database.
    - improved performance.
+### version 1.02.01, 1.02.02, 1.02.03 summary
+
+- Modified URI for API calls, to connect with backend server after deployment.
+- fixed minor issues.
+
+### version 1.02.04 summary
+
+- Fixed Mobile view issues.

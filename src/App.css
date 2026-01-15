@@ -402,4 +402,150 @@ nav {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Mobile Typography Overrides */
+    h1 {
+        font-size: 2.5rem !important;
+        /* Override inline styles if present, but we will move to classes */
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Mobile Flex/Grid Adjustments */
+    .hero-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 3rem !important;
+    }
+
+    .hero-text-content {
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+    .hero-text-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .reverse-on-mobile {
+        flex-direction: column-reverse !important;
+    }
+
+    .flex-responsive {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .flex-responsive .text-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .flex-responsive ul {
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+/* =========================================
+     New Responsive Component Classes
+     ========================================= */
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #001233;
+    /* Background pattern handled inline or move here if static */
+    background-image:
+        repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 1px, transparent 1px, transparent 30px),
+        repeating-linear-gradient(-45deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 1px, transparent 1px, transparent 30px),
+        linear-gradient(135deg, var(--color-primary) 0%, #001233 100%);
+    padding-top: 80px;
+    /* Navbar offset */
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-text-light);
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.flex-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.flex-item-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.flex-item-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .flex-reverse {
+        flex-direction: column;
+        /* Stack normally on mobile */
+    }
 }

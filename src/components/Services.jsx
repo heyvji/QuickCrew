@@ -37,31 +37,22 @@ const Services = () => {
                 <div style={{ width: '60px', height: '3px', backgroundColor: 'var(--color-secondary)', margin: '0 auto' }}></div>
             </div>
 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: '2.5rem'
-            }}>
+            <div className="services-grid">
                 {services.map((service, index) => (
-                    <div key={index} style={{
+                    <div key={index} className="card-hover" style={{
                         padding: '2.5rem',
                         backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${service.image})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         color: 'white',
                         borderRadius: '8px',
-                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                         cursor: 'pointer',
                         borderBottom: '4px solid transparent'
                     }}
                         onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'translateY(-10px)';
-                            e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.3)';
                             e.currentTarget.style.borderColor = 'var(--color-secondary)';
                         }}
                         onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'translateY(0)';
-                            e.currentTarget.style.boxShadow = 'none';
                             e.currentTarget.style.borderColor = 'transparent';
                         }}
                     >

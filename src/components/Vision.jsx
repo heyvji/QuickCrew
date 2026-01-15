@@ -17,11 +17,8 @@ const Vision = () => {
                     "To become the world's most trusted partner in micro-workforce management, creating a global ecosystem where <span className="text-gold">opportunity</span> meets <span className="text-gold">ambition</span> securely and seamlessly."
                 </p>
             </div>
-            <div style={{
-                marginTop: '4rem',
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                gap: '2rem'
+            <div className="grid-responsive" style={{
+                marginTop: '4rem'
             }}>
                 <div style={{ padding: '2rem', background: 'white', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
                     <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Integrity</h3>

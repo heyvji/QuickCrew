@@ -20,65 +20,25 @@ const Hero = () => {
     }, [clients.length]);
 
     return (
-        <section id="home" style={{
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#001233',
-            backgroundImage: `
-                repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 1px, transparent 1px, transparent 30px),
-                repeating-linear-gradient(-45deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 1px, transparent 1px, transparent 30px),
-                linear-gradient(135deg, var(--color-primary) 0%, #001233 100%)
-            `,
-            color: 'white',
-            textAlign: 'center',
-            padding: '0 2rem',
-            marginTop: '60px' // Offset for fixed navbar
-        }}>
-            <div className="section-padding" style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '4rem',
-                width: '100%',
-                maxWidth: '1200px',
-                alignItems: 'center'
-            }}>
+        <section id="home" className="hero-section">
+            <div className="section-padding hero-grid">
                 {/* Left Side: Text Content */}
-                <div style={{ textAlign: 'left', maxWidth: '600px' }}>
-                    <h1 style={{
-                        fontSize: '3.5rem',
-                        marginBottom: '1.5rem',
-                        color: 'white',
-                        lineHeight: '1.2'
-                    }}>
+                <div className="hero-text-content">
+                    <h1 className="hero-title">
                         Empowering Work, <span className="text-gold">Simplifying Life</span>
                     </h1>
-                    <p style={{
-                        fontSize: '1.2rem',
-                        marginBottom: '2.5rem',
-                        color: 'var(--color-text-light)',
-                        maxWidth: '500px'
-                    }}>
+                    <p className="hero-subtitle">
                         QuickCrew bridges the gap between skilled professionals and clients needing reliable assistance. Experience the power of connection.
                     </p>
-                    <div style={{ display: 'flex', gap: '1.5rem' }}>
+                    <div className="hero-buttons">
                         <a href="#services" className="btn-primary">Explore Services</a>
-                        <a href="#contact" style={{
-                            padding: '0.8rem 2rem',
-                            border: '2px solid white',
-                            borderRadius: '4px',
-                            color: 'white',
-                            fontWeight: '600',
-                            textTransform: 'uppercase',
-                            letterSpacing: '1px'
-                        }}>Contact Us</a>
+                        <a href="#contact" className="btn-primary" style={{ backgroundColor: 'transparent', color: 'white' }}>Contact Us</a>
                     </div>
                 </div>
 
                 {/* Right Side: Major Clients */}
                 <div>
-                    <h3 style={{ color: 'var(--color-secondary)', marginBottom: '1.5rem', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Trusted by Industry Leaders</h3>
+                    <h3 className="mb-4" style={{ color: 'var(--color-secondary)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Trusted by Industry Leaders</h3>
                     <div style={{
                         position: 'relative',
                         height: '180px',
