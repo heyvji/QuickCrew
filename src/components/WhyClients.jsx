@@ -6,7 +6,7 @@ const WhyClients = () => {
         <section className="section-padding" style={{ backgroundColor: 'var(--color-primary)', color: 'white' }}>
             <div className="flex-responsive">
                 <div className="flex-item-text">
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Why Clients Choose <span className="text-gold">QuickCrew</span></h2>
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Have a seamless, smooth workflow with <span className="text-gold">QuickCrew</span></h2>
                     <ul style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
                         <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
                             <span style={{ color: 'var(--color-secondary)', marginRight: '10px' }}>✓</span>
@@ -38,7 +38,7 @@ const WhyClients = () => {
                                 e.currentTarget.style.backgroundColor = 'var(--color-secondary)';
                             }}
                         >
-                            Download Client App
+                            Find your first crew
                         </a>
                     </div>
                 </div>

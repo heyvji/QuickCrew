@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import companyLogo from '../assets/images/company-logo.png';
 
 const Navbar = () => {
@@ -35,10 +36,14 @@ const Navbar = () => {
     return (
         <nav className={isHidden ? 'navbar-hidden' : ''}>
             <div className="nav-logo">
-                <div><img src={companyLogo} alt="Company Logo" width="80" height="80" /></div>
-                <div className="navbar-logo-text">
-                    QuickCrew
-                </div>
+                <Link to="/" onClick={() => setIsOpen(false)}>
+                    <div><img src={companyLogo} alt="Company Logo" width="80" height="80" /></div>
+                </Link>
+                <Link to="/" onClick={() => setIsOpen(false)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <div className="navbar-logo-text">
+                        QuickCrew
+                    </div>
+                </Link>
             </div>
 
             <div className="hamburger" onClick={toggleMenu}>
@@ -48,11 +53,11 @@ const Navbar = () => {
             </div>
 
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-                <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
-                <li><a href="#about" onClick={() => setIsOpen(false)}>About Us</a></li>
-                <li><a href="#vision" onClick={() => setIsOpen(false)}>Vision</a></li>
-                <li><a href="#services" onClick={() => setIsOpen(false)}>Services</a></li>
-                <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+                <li><NavLink to="/" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
+                <li><NavLink to="/about" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "active-link" : ""}>About Us</NavLink></li>
+                <li><NavLink to="/services" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "active-link" : ""}>Services</NavLink></li>
+                <li><NavLink to="/safety" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "active-link" : ""}>Safety</NavLink></li>
+                <li><NavLink to="/contact" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? "active-link" : ""}>Contact</NavLink></li>
             </ul>
         </nav>
     );

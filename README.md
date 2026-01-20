@@ -47,6 +47,8 @@ To get started with the project locally, follow these steps:
 
 This project is licensed under the MIT License.
 
+## Version History
+
 ### version 1.00.00 summary
 
 - Initial release with basic features.
@@ -66,6 +68,7 @@ This project is licensed under the MIT License.
    - social links layout
    - Modified contact us page with MongoDB database.
    - improved performance.
+
 ### version 1.02.01, 1.02.02, 1.02.03 summary
 
 - Modified URI for API calls, to connect with backend server after deployment.
@@ -77,3 +80,7 @@ This project is licensed under the MIT License.
 - Fixed logo display after deployment.
 - added effects to navigation bar links when mouse hovers over them.
 - Navbar hides when scrolling down and shows when scrolling up.
+
+### version 1.03.00 summary
+
+- Restructured whole presentation from only components use to multi-page presentation.

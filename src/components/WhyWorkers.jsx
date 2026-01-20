@@ -6,7 +6,7 @@ const WhyWorkers = () => {
         <section className="section-padding" style={{ backgroundColor: 'white', color: 'var(--color-primary)' }}>
             <div className="flex-responsive flex-reverse">
                 <div className="flex-item-text">
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Why Workers Choose <span className="text-gold">QuickCrew</span></h2>
+                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Take control of what you earn for what you do with <span className="text-gold">QuickCrew</span></h2>
                     <ul style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
                         <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
                             <span style={{ color: 'var(--color-secondary)', marginRight: '10px' }}>✓</span>
@@ -14,7 +14,7 @@ const WhyWorkers = () => {
                         </li>
                         <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
                             <span style={{ color: 'var(--color-secondary)', marginRight: '10px' }}>✓</span>
-                            Instant payments for daily needs.
+                            Guaranteed payments for daily work.
                         </li>
                         <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
                             <span style={{ color: 'var(--color-secondary)', marginRight: '10px' }}>✓</span>
@@ -23,7 +23,7 @@ const WhyWorkers = () => {
                     </ul>
                     <div style={{ display: 'flex', gap: '1rem' }}>
                         <a href="#" className="btn-primary">
-                            Download Worker App
+                            Become a Crew Member
                         </a>
                     </div>
                 </div>

@@ -5,29 +5,41 @@ import clientAssistantImg from '../assets/images/client-assistent.png';
 const Services = () => {
     const services = [
         {
-            title: 'Stall Handling',
+            title: 'Corporate',
             description: 'Professional management for your event stalls and pop-up shops.',
-            // icon: '🎪',
-            image: stallHandlingImg
+            icon: '🎪',
+            // image: stallHandlingImg
         },
         {
-            title: 'Event Volunteering',
+            title: 'Tech',
             description: 'Dedicated support staff for corporate and social events.',
-            // icon: '🤝',
-            image: eventVolunteeringImg
+            icon: '🤝',
+            // image: eventVolunteeringImg
         },
         {
-            title: 'Client Assistance',
+            title: 'Promotional',
             description: 'On-demand help for administrative and logistical tasks.',
-            // icon: '📋',
-            image: clientAssistantImg
+            icon: '📋',
+            // image: clientAssistantImg
         },
-        // {
-        //     title: 'Shadow Work',
-        //     description: 'Assisting professionals by observing and performing routine tasks.',
-        //     // icon: '👥',
-        //     image: clientAssistantImg // Using placeholder
-        // }
+        {
+            title: 'Weddings',
+            description: 'Assisting professionals by observing and performing routine tasks.',
+            icon: '👥',
+            // image: clientAssistantImg
+        },
+        {
+            title: "Movie casting",
+            description: "Junior artists for background or side roles in movie/ads",
+            icon: '🎬',
+            // image: 
+        },
+        {
+            title: "Parties",
+            description: "Helping organize parties and events",
+            icon: '🎉',
+            // image: 
+        }
     ];
 
     return (

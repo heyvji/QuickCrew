@@ -4,7 +4,7 @@ const Hero = () => {
     const clients = [
         { id: 1, name: 'Hilton', logo: 'H' },
         { id: 2, name: 'Marriott', logo: 'M' },
-        { id: 3, name: 'W', logo: 'W' },
+        { id: 3, name: 'ITC Hotels', logo: 'ITC' },
         { id: 4, name: 'Four Seasons', logo: 'FS' },
         { id: 5, name: 'Hyatt', logo: 'H' }
     ];
@@ -25,20 +25,21 @@ const Hero = () => {
                 {/* Left Side: Text Content */}
                 <div className="hero-text-content">
                     <h1 className="hero-title">
-                        Empowering Work, <span className="text-gold">Simplifying Life</span>
+                        <span style={{ fontSize: '4rem' }}>Empowering</span> <span className="text-gold" style={{ fontSize: '4.5rem' }}>Workforce, </span>
+                        <span style={{ fontSize: '4rem' }}>Simplifying</span> <span className="text-gold" style={{ fontSize: '4.5rem' }}>Workflows</span>
                     </h1>
                     <p className="hero-subtitle">
                         QuickCrew bridges the gap between skilled professionals and clients needing reliable assistance. Experience the power of connection.
                     </p>
                     <div className="hero-buttons">
-                        <a href="#services" className="btn-primary">Explore Services</a>
-                        <a href="#contact" className="btn-primary" style={{ backgroundColor: 'transparent', color: 'white' }}>Contact Us</a>
+                        <a href="./services" className="btn-primary">Explore Services</a>
+                        <a href="./Contact" className="btn-primary" style={{ backgroundColor: 'transparent', color: 'white' }}>Contact Us</a>
                     </div>
                 </div>
 
                 {/* Right Side: Major Clients */}
                 <div>
-                    <h3 className="mb-4" style={{ color: 'var(--color-secondary)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: 'bold' }}>Trusted by Industry Leaders</h3>
+                    <h3 className="mb-5 text-center" style={{ color: 'var(--color-secondary)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '1rem', fontWeight: 'bold' }}>Trusted by Industry Leaders</h3>
                     <div style={{
                         position: 'relative',
                         height: '280px',
@@ -60,15 +61,15 @@ const Hero = () => {
                             textAlign: 'center'
                         }}>
                             <div style={{
-                                fontSize: '2rem',
-                                // fontStyle: 'Poppins',
+                                fontSize: '5rem',
+                                fontStyle: 'bold',
                                 marginBottom: '10px',
-                                color: 'rgba(255,255,255,0.8)'
+                                color: 'var(--color-secondary)'
                             }}>
                                 {clients[currentClient].logo}
                             </div>
                             <div style={{
-                                fontSize: '1.2rem',
+                                fontSize: '2rem',
                                 fontWeight: 'bold',
                                 color: 'white'
                             }}>
